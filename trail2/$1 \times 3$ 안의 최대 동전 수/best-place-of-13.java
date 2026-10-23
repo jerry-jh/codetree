@@ -11,10 +11,7 @@ public class Main {
         int max = 0;
         for(int i=0; i<n; i++){
             for(int j=0; j<n-2; j++){
-                int ans = 0;
-                if(grid[i][j]==1) ans++;
-                if(grid[i][j+1]==1) ans++;
-                if(grid[i][j+2]==1) ans++;
+                int ans = grid[i][j] + grid[i][j + 1] + grid[i][j + 2];
                 max = Math.max(max, ans);
             }
         }
